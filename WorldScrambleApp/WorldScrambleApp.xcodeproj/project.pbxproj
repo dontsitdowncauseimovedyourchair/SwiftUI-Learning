@@ -35,16 +35,6 @@
 			path = WorldScrambleApp;
 			sourceTree = "<group>";
 		};
-		5B4AF8B92F011F2A00F07A1D /* WorldScrambleAppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WorldScrambleAppTests;
-			sourceTree = "<group>";
-		};
-		5B4AF8C32F011F2A00F07A1D /* WorldScrambleAppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WorldScrambleAppUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				5B4AF8AB2F011F2900F07A1D /* WorldScrambleApp */,
-				5B4AF8B92F011F2A00F07A1D /* WorldScrambleAppTests */,
-				5B4AF8C32F011F2A00F07A1D /* WorldScrambleAppUITests */,
 				5B4AF8AA2F011F2900F07A1D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +118,6 @@
 			dependencies = (
 				5B4AF8B82F011F2A00F07A1D /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				5B4AF8B92F011F2A00F07A1D /* WorldScrambleAppTests */,
-			);
 			name = WorldScrambleAppTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +137,6 @@
 			);
 			dependencies = (
 				5B4AF8C22F011F2A00F07A1D /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5B4AF8C32F011F2A00F07A1D /* WorldScrambleAppUITests */,
 			);
 			name = WorldScrambleAppUITests;
 			packageProductDependencies = (

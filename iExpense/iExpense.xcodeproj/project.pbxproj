@@ -35,16 +35,6 @@
 			path = iExpense;
 			sourceTree = "<group>";
 		};
-		5B4AF96C2F10D6FE00F07A1D /* iExpenseTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iExpenseTests;
-			sourceTree = "<group>";
-		};
-		5B4AF9762F10D6FE00F07A1D /* iExpenseUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iExpenseUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				5B4AF95E2F10D6FC00F07A1D /* iExpense */,
-				5B4AF96C2F10D6FE00F07A1D /* iExpenseTests */,
-				5B4AF9762F10D6FE00F07A1D /* iExpenseUITests */,
 				5B4AF95D2F10D6FC00F07A1D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +118,6 @@
 			dependencies = (
 				5B4AF96B2F10D6FE00F07A1D /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				5B4AF96C2F10D6FE00F07A1D /* iExpenseTests */,
-			);
 			name = iExpenseTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +137,6 @@
 			);
 			dependencies = (
 				5B4AF9752F10D6FE00F07A1D /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5B4AF9762F10D6FE00F07A1D /* iExpenseUITests */,
 			);
 			name = iExpenseUITests;
 			packageProductDependencies = (
