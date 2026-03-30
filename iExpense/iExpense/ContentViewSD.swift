@@ -28,75 +28,51 @@ struct ContentViewSD: View {
     
     @Query var expenses : [ExpenseItemSD]
     @Environment(\.modelContext) var modelContext
+    
+    @State private var filters : [String] = ["Personal", "Business"]
+    @State private var sort : Bool = true
+    
     @State private var showingAddView = false
     
     var body: some View {
         NavigationStack {
-            List {
-                if (expenses.contains { item in
-                    item.type == "Personal"
-                }) {
-                    Section("Personal") {
-                        ForEach(expenses) { item in
-                            if (item.type == "Personal") {
-                                HStack {
-                                    VStack(alignment: .leading) {
-                                        Text("\(item.name)")
-                                    }
-                                    
-                                    Spacer()
-                                    
-                                    Text(item.price, format: .currency(code: Locale.current.currency?.identifier ?? "MXN"))
-                                        .foregroundStyle(item.price < 10 ? .green : item.price < 100 ? .orange : .red)
-                                }
+            ExpensesView(typeFilters: filters, sortDesc: sort ? [SortDescriptor(\ExpenseItemSD.price, order: .reverse)] : [SortDescriptor(\ExpenseItemSD.name)])
+                .navigationTitle("iExpense")
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Menu("Filter", systemImage: "line.3.horizontal.decrease.circle") {
+                            Picker("Filters", selection: $filters) {
+                                Text("All")
+                                    .tag(["Personal", "Business"])
+                                Text("Personal")
+                                    .tag(["Personal"])
+                                Text("Business")
+                                    .tag(["Business"])
                             }
                         }
-                        .onDelete(perform: deleteItems)
                     }
-                }
-                if (expenses.contains { item in
-                    item.type == "Business"
-                }) {
-                    Section("Business") {
-                        ForEach(expenses) { item in
-                            if (item.type == "Business") {
-                                HStack {
-                                    VStack(alignment: .leading) {
-                                        Text("\(item.name)")
-                                    }
-                                    
-                                    Spacer()
-                                    
-                                    Text(item.price, format: .currency(code: Locale.current.currency?.identifier ?? "MXN"))
-                                        .foregroundStyle(item.price < 10 ? .green : item.price < 100 ? .orange : .red)
-                                }
-                            }
+                    
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Sort", systemImage: "arrow.up.arrow.down") {
+                            sort.toggle()
                         }
-                        .onDelete(perform: deleteItems)
+                    }
+                    
+                    ToolbarItem(placement: .primaryAction) {
+                        NavigationLink {
+                            AddViewSD()
+                                .navigationBarBackButtonHidden()
+                        } label: {
+                            Image(systemName: "plus")
+                                .foregroundStyle(.blue)
+                        }
                     }
                 }
-            }
-            .navigationTitle("iExpense")
-            .toolbar {
-                NavigationLink {
-                    AddViewSD()
-                        .navigationBarBackButtonHidden()
-                } label: {
-                    Image(systemName: "plus")
-                        .foregroundStyle(.blue)
-                }
-            }
-        }
-    }
-    
-    func deleteItems(at offsets: IndexSet) {
-        for offset in offsets {
-            modelContext.delete(expenses[offset])
         }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentViewSD()
         .modelContainer(for: ExpenseItemSD.self)
 }
