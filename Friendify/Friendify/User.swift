@@ -1,6 +1,6 @@
 //
 //  User.swift
-//  Friendlyfy
+//  Friendify
 //
 //  Created by Alejandro González on 31/03/26.
 //

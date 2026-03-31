@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		5B2F02182F7C46CC0010B45E /* Friendlyfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friendlyfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B2F02532F7C873A0010B45E /* Friendify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friendify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5B2F021A2F7C46CC0010B45E /* Friendlyfy */ = {
+		5B2F02552F7C873A0010B45E /* Friendify */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Friendlyfy;
+			path = Friendify;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5B2F02152F7C46CC0010B45E /* Frameworks */ = {
+		5B2F02502F7C873A0010B45E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B2F020F2F7C46CC0010B45E = {
+		5B2F024A2F7C873A0010B45E = {
 			isa = PBXGroup;
 			children = (
-				5B2F021A2F7C46CC0010B45E /* Friendlyfy */,
-				5B2F02192F7C46CC0010B45E /* Products */,
+				5B2F02552F7C873A0010B45E /* Friendify */,
+				5B2F02542F7C873A0010B45E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5B2F02192F7C46CC0010B45E /* Products */ = {
+		5B2F02542F7C873A0010B45E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B2F02182F7C46CC0010B45E /* Friendlyfy.app */,
+				5B2F02532F7C873A0010B45E /* Friendify.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B2F02172F7C46CC0010B45E /* Friendlyfy */ = {
+		5B2F02522F7C873A0010B45E /* Friendify */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B2F02232F7C46CE0010B45E /* Build configuration list for PBXNativeTarget "Friendlyfy" */;
+			buildConfigurationList = 5B2F025E2F7C873C0010B45E /* Build configuration list for PBXNativeTarget "Friendify" */;
 			buildPhases = (
-				5B2F02142F7C46CC0010B45E /* Sources */,
-				5B2F02152F7C46CC0010B45E /* Frameworks */,
-				5B2F02162F7C46CC0010B45E /* Resources */,
+				5B2F024F2F7C873A0010B45E /* Sources */,
+				5B2F02502F7C873A0010B45E /* Frameworks */,
+				5B2F02512F7C873A0010B45E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				5B2F021A2F7C46CC0010B45E /* Friendlyfy */,
+				5B2F02552F7C873A0010B45E /* Friendify */,
 			);
-			name = Friendlyfy;
+			name = Friendify;
 			packageProductDependencies = (
 			);
-			productName = Friendlyfy;
-			productReference = 5B2F02182F7C46CC0010B45E /* Friendlyfy.app */;
+			productName = Friendify;
+			productReference = 5B2F02532F7C873A0010B45E /* Friendify.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5B2F02102F7C46CC0010B45E /* Project object */ = {
+		5B2F024B2F7C873A0010B45E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2640;
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
-					5B2F02172F7C46CC0010B45E = {
+					5B2F02522F7C873A0010B45E = {
 						CreatedOnToolsVersion = 26.4;
 					};
 				};
 			};
-			buildConfigurationList = 5B2F02132F7C46CC0010B45E /* Build configuration list for PBXProject "Friendlyfy" */;
+			buildConfigurationList = 5B2F024E2F7C873A0010B45E /* Build configuration list for PBXProject "Friendify" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 5B2F020F2F7C46CC0010B45E;
+			mainGroup = 5B2F024A2F7C873A0010B45E;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 5B2F02192F7C46CC0010B45E /* Products */;
+			productRefGroup = 5B2F02542F7C873A0010B45E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B2F02172F7C46CC0010B45E /* Friendlyfy */,
+				5B2F02522F7C873A0010B45E /* Friendify */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5B2F02162F7C46CC0010B45E /* Resources */ = {
+		5B2F02512F7C873A0010B45E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5B2F02142F7C46CC0010B45E /* Sources */ = {
+		5B2F024F2F7C873A0010B45E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5B2F02212F7C46CE0010B45E /* Debug */ = {
+		5B2F025C2F7C873C0010B45E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -189,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		5B2F02222F7C46CE0010B45E /* Release */ = {
+		5B2F025D2F7C873C0010B45E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -246,7 +246,7 @@
 			};
 			name = Release;
 		};
-		5B2F02242F7C46CE0010B45E /* Debug */ = {
+		5B2F025F2F7C873C0010B45E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -266,7 +266,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Arekkusu.Friendlyfy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Arekkusu.Friendify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -278,7 +278,7 @@
 			};
 			name = Debug;
 		};
-		5B2F02252F7C46CE0010B45E /* Release */ = {
+		5B2F02602F7C873C0010B45E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -298,7 +298,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Arekkusu.Friendlyfy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Arekkusu.Friendify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -313,25 +313,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B2F02132F7C46CC0010B45E /* Build configuration list for PBXProject "Friendlyfy" */ = {
+		5B2F024E2F7C873A0010B45E /* Build configuration list for PBXProject "Friendify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B2F02212F7C46CE0010B45E /* Debug */,
-				5B2F02222F7C46CE0010B45E /* Release */,
+				5B2F025C2F7C873C0010B45E /* Debug */,
+				5B2F025D2F7C873C0010B45E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B2F02232F7C46CE0010B45E /* Build configuration list for PBXNativeTarget "Friendlyfy" */ = {
+		5B2F025E2F7C873C0010B45E /* Build configuration list for PBXNativeTarget "Friendify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B2F02242F7C46CE0010B45E /* Debug */,
-				5B2F02252F7C46CE0010B45E /* Release */,
+				5B2F025F2F7C873C0010B45E /* Debug */,
+				5B2F02602F7C873C0010B45E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5B2F02102F7C46CC0010B45E /* Project object */;
+	rootObject = 5B2F024B2F7C873A0010B45E /* Project object */;
 }
