@@ -13,16 +13,7 @@ struct ContentView: View {
     @State private var image: Image?
 
     var body: some View {
-        ContentUnavailableView {
-            Label("No snippets", systemImage: "swift")
-        } description: {
-            Text("The content has officially flopped")
-        } actions: {
-            Button("Do crazy stuff") {
-                
-            }
-            .buttonStyle(.glassProminent)
-        }
+        
     }
     
 }
