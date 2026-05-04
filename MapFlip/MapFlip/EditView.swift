@@ -7,16 +7,16 @@
 
 import SwiftUI
 
+enum LoadingState {
+    case loading, loaded, failed
+}
+
 struct EditView: View {
     @Environment(\.dismiss) var dismiss
     
     var onSave : (Location) -> Void
 
     @State private var viewModel: ViewModel
-    
-    enum LoadingState {
-        case loading, loaded, failed
-    }
     
     var body: some View {
         NavigationStack {
@@ -42,10 +42,7 @@ struct EditView: View {
             .navigationTitle("Edit Pin")
             .toolbar {
                 Button("Save", role: .confirm) {
-                    var newLocation = viewModel.location
-                    newLocation.id = UUID()
-                    newLocation.name = viewModel.name
-                    newLocation.description = viewModel.description
+                    let newLocation = viewModel.createNewLocation()
                     onSave(newLocation)
                     dismiss()
                 }

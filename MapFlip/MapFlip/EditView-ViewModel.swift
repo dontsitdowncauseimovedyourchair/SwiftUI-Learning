@@ -37,6 +37,14 @@ extension EditView {
                 loadingState = .failed
             }
         }
+        
+        func createNewLocation() -> Location {
+            var newLocation = location
+            newLocation.id = UUID()
+            newLocation.name = name
+            newLocation.description = description
+            return newLocation
+        }
 
         init(location: Location) {
             self.location = location
