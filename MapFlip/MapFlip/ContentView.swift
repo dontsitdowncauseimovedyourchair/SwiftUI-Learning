@@ -16,6 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         if viewModel.isUnlocked {
+            ZStack(alignment: .bottomTrailing) {
             MapReader { proxy in
                 Map(initialPosition: position) {
                     ForEach(viewModel.pins) { pin in
@@ -37,7 +38,7 @@ struct ContentView: View {
                         
                     }
                 }
-                .mapStyle(.standard)
+                .mapStyle(viewModel.isHybrid ? .hybrid : .standard)
                 .onTapGesture { position in
                     if let coordinates = proxy.convert(position, from: .local) {
                         viewModel.addLocation(at: coordinates)
@@ -49,6 +50,20 @@ struct ContentView: View {
                     viewModel.updateLocation(location: newLocation)
                 }
             }
+                
+            Button {
+                viewModel.isHybrid.toggle()
+            } label: {
+                Image(systemName: (viewModel.isHybrid ? "square.2.layers.3d.bottom.filled" : "square.2.layers.3d.top.filled"))
+            }
+            .padding()
+            .background(.ultraThinMaterial)
+            .clipShape(.circle)
+            .offset(x: -15, y: -20)
+            .shadow(radius: 2, x: 1, y: 1)
+                
+            }
+            .ignoresSafeArea()
         } else {
             ZStack {
                 Map(initialPosition: position)
@@ -57,6 +72,11 @@ struct ContentView: View {
                     .ignoresSafeArea()
                     .foregroundStyle(.ultraThinMaterial)
                 Button("Unlock pins", action: viewModel.authenticate)
+            }
+            .alert("Flopped whilst unlocking pins", isPresented: $viewModel.showingAuthAlert) {
+                    
+            } message: {
+                Text(viewModel.authAlertMessage)
             }
         }
     }

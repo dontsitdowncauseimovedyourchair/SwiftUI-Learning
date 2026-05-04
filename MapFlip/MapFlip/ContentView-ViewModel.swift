@@ -8,16 +8,23 @@
 import Foundation
 import MapKit
 import LocalAuthentication
+import SwiftUI
 
 extension ContentView {
     @Observable
     class ViewModel {
+        
         private(set) var pins: [Location]
         var selectedLocation: Location?
         
         let savePath = URL.documentsDirectory.appending(path: "SavedPlaces")
         
         var isUnlocked = false
+        
+        var isHybrid = false;
+        
+        var showingAuthAlert = false
+        var authAlertMessage = ""
         
         init() {
             do {
@@ -64,11 +71,15 @@ extension ContentView {
                     if (success) {
                         self.isUnlocked = true
                     } else {
-                        //flop
+                        self.authAlertMessage = "Is it you??"
+                        self.showingAuthAlert = true
                     }
                 }
             } else {
                 //Device is ancestral or hasn't configured biometrics yet
+                self.authAlertMessage = "Device is ancestral or hasn't configured biometrics yet"
+                print("No FaceID :( <-- Note the sad face (cause no SadFaceID)")
+                self.showingAuthAlert = true;
             }
         }
     }
